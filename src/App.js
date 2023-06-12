@@ -1,21 +1,58 @@
 // import Card from "./Card";
-import Btn from "./Btn";
-import Child from "./Child";
-import "./App.css";
+// import Btn from "./Btn";
+// import Child from "./Child";
+// import "./App.css";
+
+import React from "react";
+import Fruits from "./Fruits";
+import FruitsCounter from "./FruitsCounter";
+
+function App() {
+  const [fruits] = React.useState([
+    {fruitName: 'apple', id: 1},
+    {fruitName: 'apple', id: 2},
+    {fruitName: 'plum', id: 3},
+  ]);
 
 
-
-
-function App(){
-  const date = new Date()
-
-  return(
-    <div>
-      <Child message = {date.toLocaleTimeString()}/>
+  return (
+    <div className="App">
+      <h1>Where should the state go?</h1>
+      <Fruits fruits = {fruits}/>
+      <FruitsCounter  fruits ={fruits}/>
     </div>
-  )
+  );
 }
+
 export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function App(){
+//   const date = new Date()
+
+//   return(
+//     <div>
+//       <Child message = {date.toLocaleTimeString()}/>
+//     </div>
+//   )
+// }
+// export default App;
 
 
 
