@@ -1,30 +1,64 @@
+import AboutMe from "./AboutMe";
+import Homepage from "./Homepage";
+import { Routes,Route, Link } from "react-router-dom";
+
+function App (){
+  return(
+    <div className ="App">
+      <nav className="nav">
+        <Link to="/" className="nav-item">Homepage</Link>
+        <Link to="/ about-me" className="nav-item">About Me</Link>
+        <Link to="/ about-me" className="nav-item">Contact</Link>
+      </nav>
+      <Routes>
+      <Route path="/" element={<Homepage/>}/>
+      <Route path="/about-me" element={<AboutMe/>}/>
+      </Routes>
+    </div>
+  );
+}
+export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // import Card from "./Card";
 // import Btn from "./Btn";
 // import Child from "./Child";
 // import "./App.css";
 
-import React from "react";
-import Fruits from "./Fruits";
-import FruitsCounter from "./FruitsCounter";
+// import React from "react";
+// import Fruits from "./Fruits";
+// import FruitsCounter from "./FruitsCounter";
 
-function App() {
-  const [fruits] = React.useState([
-    {fruitName: 'apple', id: 1},
-    {fruitName: 'apple', id: 2},
-    {fruitName: 'plum', id: 3},
-  ]);
+// function App() {
+//   const [fruits] = React.useState([
+//     {fruitName: 'apple', id: 1},
+//     {fruitName: 'apple', id: 2},
+//     {fruitName: 'plum', id: 3},
+//   ]);
 
+//   return (
+//     <div className="App">
+//       <h1>Where should the state go?</h1>
+//       <Fruits fruits = {fruits}/>
+//       <FruitsCounter  fruits ={fruits}/>
+//     </div>
+//   );
+// }
 
-  return (
-    <div className="App">
-      <h1>Where should the state go?</h1>
-      <Fruits fruits = {fruits}/>
-      <FruitsCounter  fruits ={fruits}/>
-    </div>
-  );
-}
-
-export default App;
+// export default App;
 
 
 
