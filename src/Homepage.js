@@ -1,9 +1,9 @@
-function Homepage(){
-  return(
+// function Homepage(){
+//   return(
     
-      <h1> Welcome to my site</h1>
+//       <h1> Welcome to my site</h1>
   
-  )
-}
+//   )
+// }
 
-export default Homepage;
+// export default Homepage;
